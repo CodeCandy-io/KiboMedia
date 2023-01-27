@@ -1,0 +1,33 @@
+.o-main {
+  position: relative;
+}
+
+.o-main__inner {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+
+.o-main__wrapper--quote {
+  font-size: 56px;
+  color: var(--c-pearl-color);
+}
+
+@media (min-width: 820px) {
+  .o-main__inner {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .o-main__inner {
+    max-width: 1536
+    px;
+  }
+
+  .o-main__wrapper--quote {
+    margin: 120px;
+  }
+}
+

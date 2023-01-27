@@ -1,0 +1,35 @@
+.a-btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+    color: var(--c-text-color);
+}
+
+.a-btn--contact {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    border: 1px solid var(--c-text-color);
+    padding: 24px 48px ;
+    background-color: var(--c-gold-color);
+    font-size: 40px;
+}
+
+
+@media screen and (min-width: 1020px) {
+    .a-btn--contact {
+        transition: all 280ms ease-in-out;
+        position: absolute;
+        top: 146px;
+        right: 16px;
+        bottom: auto;
+        left: auto;
+    }
+
+    .a-btn--contact:hover {
+        background-color: var(--c-text-color);
+        color: var(--c-gold-color);
+    }
+}

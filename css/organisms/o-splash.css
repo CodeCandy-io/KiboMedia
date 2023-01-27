@@ -1,0 +1,79 @@
+.o-splash {
+    animation-name: FadeIn;
+	animation-duration: 1400ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+    position: relative;
+    font-size: var(--fs-s-m);
+}
+
+.o-splash__sub-header {
+    display: flex;
+    flex: row;
+    margin-top: 8px;
+    padding: 8px;
+    border-top: 1px solid var(--c-text-color);
+    border-bottom: 1px solid var(--c-text-color);
+    align-items: center;
+}
+
+.o-splash__sub-header--cell {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    flex: 1;
+}
+
+.o-splash__title {
+    font-size: 48px;
+    margin-bottom: 56px;
+    line-height: 0.9;
+}
+
+.o-splash--icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+}
+
+.o-splash--wordly {
+    color: var(--c-nuclear-color);
+}
+
+.o-splash__sub-header--cell:last-child {
+    text-align: right;
+    display: none;
+}
+
+.o-splash--image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 16px 0;
+}
+
+@media screen and (min-width: 1020px) {
+    .o-splash {
+        font-size: var(--fs-m-s);
+    }
+
+    .o-splash__title {
+        font-size: 120px;
+    }
+    
+    .o-splash__sub-header {
+        margin-top: 32px;
+        padding: 16px 24px;
+    }
+
+    .o-splash__sub-header--cell:last-child {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .o-splash__title {
+        font-size: 152px
+    }
+}

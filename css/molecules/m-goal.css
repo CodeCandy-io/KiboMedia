@@ -1,0 +1,54 @@
+.m-goal {
+    overflow: hidden;
+    margin: 16px 0 0;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.m-goal__text {
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    text-align: center;
+    z-index: 2;
+}
+
+.m-goal__cell {
+    flex: 1;
+}
+
+.m-goal__cell--line {
+    flex: 1.5;
+    position: relative;
+}
+
+.m-goal__cell--line:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--c-text-color);
+}
+
+.m-goal__footnote {
+    margin-bottom: 16px;
+}
+
+
+@media screen and (min-width: 720px) {
+    .m-goal__text {
+        font-size: var(--fs-m-s);
+        width: 420px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .m-goal__text {
+        font-size: var(--fs-m-s);
+    }
+}

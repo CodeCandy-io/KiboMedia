@@ -1,0 +1,117 @@
+/* ===================================================
+FONTS AND VARIABLES
+=====================================================*/
+
+@font-face {
+  font-family: 'Caslon-RR';
+  src: 
+         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.otf?#iefix') format('embedded-opentype'),
+         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.woff') format('woff'),
+         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.ttf') format('truetype'),
+         url('../fonts/caslon/Caslon-RR-Bold-ExtraCond.svg#icomoonregular') format('svg');
+}
+
+@font-face {
+  font-family: 'SpaceGrotesk';
+  src: 
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('embedded-opentype'),
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('woff'),
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'),
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('svg');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SpaceGroteskBold';
+  src: 
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('embedded-opentype'),
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('woff'),
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'),
+         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('svg');
+  font-weight: bold;
+}
+
+
+:root {
+  /*FONTS*/
+  --f-font-special:      Caslon-RR;
+  --f-text-regular:      SpaceGrotesk;
+
+  
+  /*COLORS*/
+  --c-bg-color:           #EAE3DE;
+  --c-nuclear-color:      #fff;
+  --c-text-color:         #0A0A0A;
+  --c-accent-text-color:  #338890;
+  --c-amber-color:        #FE6529;
+  --c-gold-color:         #F7FC83;
+  --c-pearl-color:        #8F8279;
+  
+
+  /*SIZEZ*/
+
+  --fs-s-m:           14px;
+  --fs-s-l:           16px;
+  --fs-m-s:           20px;
+  --fs-m:             24px;
+  --fs-m-l:           32px;
+  --fs-l-s:           40px;
+  --fs-l:             48px;
+  --fs-l-l:           56px;
+  --fs-xl-s:          64px;
+  --fs-xl-l:          72px;
+  --fs-xl-xl:         80px;
+  --fs-xxl-s:         88px;
+  --fs-xxl-m:         120px;
+  --fs-xxl-xl:        160px; 
+}
+
+@keyframes itsCopied {
+	from {
+	  top: 80px;
+    opacity: 1;
+	}
+	to {
+		top: -100px;
+    opacity: 0;
+	}
+}
+
+@keyframes FadeIn {
+	from {
+    opacity: 0;
+	}
+
+  30% {
+    opacity: 0.1;
+	}
+
+	to {
+    opacity: 1;
+	}
+}
+
+
+@keyframes rotation {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(359deg);
+	}
+}
+
+@keyframes modalColor {
+	0% {
+	  background-color:  var(--c-amber-color);
+	}
+  80% {
+	  background-color:  var(--c-amber-color);
+	}
+	100% {
+	  background-color:  var(--c-bg-color);
+	}
+}
+  
+

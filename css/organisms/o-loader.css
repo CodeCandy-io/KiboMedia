@@ -1,0 +1,42 @@
+.o-loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-bg-color);
+	animation-name: modalHide;
+	animation-duration: 4400ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+    z-index: 100;
+}
+
+.o-loader__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    animation-name: modalColor;
+	animation-duration: 3400ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+}
+
+.o-loader__wrapper--title {
+    font-size: 32px;
+}
+
+.o-loader__wrapper  .-veil {
+    margin: 16px;
+}
