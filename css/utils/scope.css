@@ -1,0 +1,127 @@
+/* SCOPE CLASSES */
+
+.-link {
+    margin-top: 16px;
+    color: var(--c-text-color);
+    text-decoration: none;
+}
+
+.-link:hover {
+    color: var(--c-amber-color);
+}
+
+.-nav-item {
+    transition: opacity 280ms ease-in-out;
+    padding: 0 4px;
+    cursor: default;
+}
+
+.-nav-item:hover {
+    color: var(--c-amber-color);
+}
+
+.-nav-item+.-nav-item {
+    margin-left: 8px;
+}
+
+.-highlight {
+    color: var(--c-amber-color);
+}
+
+.-highlight-dark {
+    color: var(--c-text-color);
+}
+
+.-highlight-light {
+    color: var(--c-gold-color);
+}
+
+.-bold {
+    font-family: var(--f-text-bold);
+}
+
+.-uppercase {
+    text-transform: uppercase;
+}
+
+.-centered {
+    text-align: center;
+}
+
+.-small {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+/* ================ ALIGNS ================ */
+
+.-right {
+    text-align: right;
+}
+
+/* ================ COLORS ================ */
+
+.-highlight-light {
+    color: yellow;
+}
+
+.-pearl {
+    color: var(--c-pearl-color);
+}
+
+
+.-veil {
+    opacity: 0.6;
+}
+
+
+/*SIZE*/
+
+.-fs-l-s {
+    font-size: var(--fs-l-s);
+    line-height: 1;
+}
+
+.-fs-m {
+    font-size: var(--fs-l);
+    line-height: 1;
+}
+
+.-fs-m-l {
+    font-size: var(--fs-m-l);
+}
+
+.-medium {
+    font-size: 20px;
+}
+
+@media (min-width: 1020px) {
+    .-small {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .-fs-m {
+        font-size: var(--fs-xl-s);
+    }
+
+    .-fs-m-l {
+        font-size: var(--fs-xl-xl);
+    }
+}
+
+@media (min-width: 1420px) {
+    body {
+        font-size: 24px;
+    }
+
+    .-fs-m {
+        font-size: var(--fs-xl-s);
+    }
+}
+
+@media (min-width: 1920px) {
+    .-fs-m {
+        font-size: var(--fs-xl-xl);
+    }
+}

@@ -1,0 +1,30 @@
+.a-quote {
+  font-size: 32px;
+  color: var(--c-pearl-color);
+}
+
+.a-quote--xl {
+  font-size: 56px;
+  color: var(--c-nuclear-color);
+}
+  
+@media screen and (min-width: 1020px) {
+  .a-quote {
+    font-size: 56px;
+    color: var(--c-pearl-color);
+  }
+
+  .a-quote--xl {
+    font-size: 120px;
+    color: var(--c-nuclear-color);
+  }
+  
+}
+
+@media screen and (min-width: 2020px) {
+  .a-quote--xl {
+    font-size: 135px;
+    color: var(--c-nuclear-color);
+  }
+  
+}

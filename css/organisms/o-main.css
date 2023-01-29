@@ -4,14 +4,42 @@
 
 .o-main__inner {
   position: relative;
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 8px;
 }
 
-.o-main__wrapper--quote {
-  font-size: 56px;
-  color: var(--c-pearl-color);
+.o-main__inner--form {
+  overflow: hidden;
+  margin: 120px 8px;
+  padding: 32px;
+  border-radius: 15px;
+  background-color: var(--c-text-color);
+  color: var(--c-nuclear-color);
+}
+
+.o-main__inner--form svg {
+  display: none;
+}
+
+.o-main__inner--form::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../images/ic-form-flower.svg");
+}
+
+.o-main__inner--events {
+  padding: 120px 0;
 }
 
 @media (min-width: 820px) {
@@ -20,10 +48,25 @@
   }
 }
 
+@media (min-width: 1020px) {
+  .o-main__inner {
+    padding: 0 8px 220px;
+  }
+
+  .o-main__inner--form {
+    margin: 120px auto 120px;
+    border-radius: 50px;
+    padding: 120px;
+  }
+
+  .o-main__inner--form svg {
+    display: block;
+  }
+}
+
 @media (min-width: 1920px) {
   .o-main__inner {
-    max-width: 1536
-    px;
+    max-width: 1536px;
   }
 
   .o-main__wrapper--quote {

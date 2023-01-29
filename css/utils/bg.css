@@ -1,0 +1,47 @@
+.-bg {
+    overflow: hidden;
+    padding: 48px 0;
+}
+
+.-bg--amber {
+    background-color: var(--c-amber-color);
+}
+
+.-bg--gold-light {
+    background-color: var(--c-gold-color-light);
+}
+
+.-bg--gold-light .m-marquee__track {
+    color: var(--c-gold-color-light);
+}
+
+.-bg--banana {
+    background-color: var(--c-banana-color);
+}
+
+.-bg--banana .m-marquee__track {
+    color: var(--c-banana-color);
+}
+
+.-bg--cheddar {
+    background-color: var(--c-cheddar-color);
+}
+
+.-bg--cheddar .m-marquee__track {
+    color: var(--c-cheddar-color);
+}
+
+.-bg--watermelon {
+    background-color: var(--c-watermelon-color);
+}
+
+.-bg--watermelon .m-marquee__track {
+    color: var(--c-watermelon-color);
+}
+
+.-bg-half {
+    overflow: hidden;
+    background: linear-gradient(var(--c-amber-color) 70%,
+    /* start at 0 and end at 20% */
+    var(--c-nuclear-color) 0);
+}

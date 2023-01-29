@@ -1,15 +1,24 @@
 .m-carousel {
     display: flex;
+    overflow-x: auto;
     flex-direction: row;
-    margin: 56px auto;
+    width: 100%;
+    margin: 24px auto;
+    justify-content: center;
 }
 
 .m-carousel__item {
-    width: 420px;
+    width: 220px;
     text-align: center;
 }
 
 .m-carousel__item img {
     height: 48px;
     opacity: 0.5;
+}
+
+@media screen and (min-width: 1020px) {
+    .m-carousel {
+        padding: 32px 0;
+    }
 }

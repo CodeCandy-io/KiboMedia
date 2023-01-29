@@ -37,6 +37,7 @@ FONTS AND VARIABLES
   /*FONTS*/
   --f-font-special:      Caslon-RR;
   --f-text-regular:      SpaceGrotesk;
+  --f-text-bold:         SpaceGroteskBold;
 
   
   /*COLORS*/
@@ -46,8 +47,11 @@ FONTS AND VARIABLES
   --c-accent-text-color:  #338890;
   --c-amber-color:        #FE6529;
   --c-gold-color:         #F7FC83;
+  --c-gold-color-light:   #FFF6CD;
   --c-pearl-color:        #8F8279;
-  
+  --c-banana-color:       #FDDB56;
+  --c-cheddar-color:      #FAC367;
+  --c-watermelon-color:   #E87395;
 
   /*SIZEZ*/
 
@@ -66,52 +70,3 @@ FONTS AND VARIABLES
   --fs-xxl-m:         120px;
   --fs-xxl-xl:        160px; 
 }
-
-@keyframes itsCopied {
-	from {
-	  top: 80px;
-    opacity: 1;
-	}
-	to {
-		top: -100px;
-    opacity: 0;
-	}
-}
-
-@keyframes FadeIn {
-	from {
-    opacity: 0;
-	}
-
-  30% {
-    opacity: 0.1;
-	}
-
-	to {
-    opacity: 1;
-	}
-}
-
-
-@keyframes rotation {
-	from {
-	  transform: rotate(0deg);
-	}
-	to {
-	  transform: rotate(359deg);
-	}
-}
-
-@keyframes modalColor {
-	0% {
-	  background-color:  var(--c-amber-color);
-	}
-  80% {
-	  background-color:  var(--c-amber-color);
-	}
-	100% {
-	  background-color:  var(--c-bg-color);
-	}
-}
-  
-

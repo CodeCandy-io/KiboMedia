@@ -1,0 +1,59 @@
+.m-form {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+}
+
+.m-form .a-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+}
+
+.m-form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    appearance: none;
+}
+
+.m-form--label {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.m-form--input {
+    transition: border 180ms ease;
+    box-sizing: border-box;
+    appearance: none;
+    padding: 24px 16px;
+    background-color: transparent;
+    border: 1px solid var(--c-nuclear-color);
+    color: var(--c-nuclear-color);
+    font-size: 24px;
+}
+
+.m-form--input:focus {
+    outline: none;
+    border: 1px solid var(--c-gold-color);
+}
+
+.m-form__input-wrapper + .m-form__input-wrapper {
+    margin-top: 32px;
+}
+
+.m-form__actions-wrapper {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.m-form .a-btn--contact {
+    left: auto;
+    right: auto;
+}
+
+@media (min-width: 1020px) {
+    .m-form {
+        margin: 0 72px; 
+    }
+  }

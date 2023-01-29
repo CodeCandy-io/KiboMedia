@@ -12,20 +12,25 @@
     bottom: 16px;
     left: 16px;
     border: 1px solid var(--c-text-color);
-    padding: 24px 48px ;
+    padding: 24px 48px;
     background-color: var(--c-gold-color);
-    font-size: 40px;
+    font-size: 24px;
+    text-align: center;
+    z-index: 100;
 }
 
 
 @media screen and (min-width: 1020px) {
     .a-btn--contact {
+        margin: 0 auto;
         transition: all 280ms ease-in-out;
         position: absolute;
         top: 146px;
         right: 16px;
         bottom: auto;
         left: auto;
+        padding: 24px 48px;
+        font-size: 40px;
     }
 
     .a-btn--contact:hover {

@@ -27,13 +27,15 @@
 
 .o-splash__title {
     font-size: 48px;
-    margin-bottom: 56px;
+    margin-bottom: 16px;
     line-height: 0.9;
 }
 
 .o-splash--icon {
     display: inline-block;
     vertical-align: middle;
+    width: 56px;
+    height: 56px;
     margin-right: 16px;
 }
 
@@ -60,11 +62,17 @@
 
     .o-splash__title {
         font-size: 120px;
+        margin-bottom: 56px;
     }
-    
+
     .o-splash__sub-header {
         margin-top: 32px;
         padding: 16px 24px;
+    }
+
+    .o-splash--icon {
+        width: 122px;
+        height: 122px;
     }
 
     .o-splash__sub-header--cell:last-child {

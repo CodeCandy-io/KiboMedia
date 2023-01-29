@@ -1,0 +1,38 @@
+.m-album {
+    position: relative;
+    width: 100%;
+}
+
+.m-album--press {
+    height: 800px;
+}
+
+.m-album__photo {
+    position: absolute;
+}
+
+.m-album__photo--v {
+    right: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.m-album__photo--p {
+    display: none;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+@media screen and (min-width: 1020px) {
+    .m-album__photo--v {
+         top: -220px;
+        width: fit-content;
+    }
+    
+    .m-album__photo--p {
+        display: block;
+        width: fit-content;
+    }    
+}

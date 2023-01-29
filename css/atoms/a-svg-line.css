@@ -1,0 +1,43 @@
+.a-svg-line {
+  width: 100%;
+}
+
+.a-svg-line--events {
+  stroke-dasharray: 1000;
+  animation: eventsLine 0.8s linear;
+}
+
+.a-svg-line--events-vortex {
+    animation: vortexFade 0.65s linear;
+}
+
+@media screen and (min-width: 1020px) {
+  .a-svg-line {
+    width: max-content;
+  }
+}
+
+@keyframes eventsLine {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes vortexFade {
+    0% {
+      opacity: 0;
+    }
+  
+    99% {
+      opacity: 0;
+    }
+      
+    100% {
+        opacity: 1;
+    }
+  }
+  

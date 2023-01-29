@@ -1,0 +1,65 @@
+
+
+@keyframes FadeIn {
+	from {
+    opacity: 0;
+	}
+
+  30% {
+    opacity: 0.1;
+	}
+
+	to {
+    opacity: 1;
+	}
+}
+
+.-rotate-left {
+	animation-name: rotateLeft;
+	animation-duration: 300ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+    position: relative;
+	transform: rotate(-4deg);
+}
+
+@keyframes rotateLeft {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(-4deg);
+	}
+}
+
+.-rotate-right {
+	animation-name: rotateRight;
+	animation-duration: 300ms;
+	animation-iteration-count: once;
+	animation-timing-function: linear;
+    position: relative;
+	transform: rotate(4deg);
+}
+
+@keyframes rotateRight {
+	0% {
+	  transform: rotate(0deg);
+	}
+	100% {
+	  transform: rotate(4deg);
+	}
+}
+
+@keyframes modalColor {
+	0% {
+	  background-color:  var(--c-amber-color);
+	}
+  80% {
+	  background-color:  var(--c-amber-color);
+	}
+	100% {
+	  background-color:  var(--c-bg-color);
+	}
+}
+  
+
