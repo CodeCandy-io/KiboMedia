@@ -88,9 +88,9 @@ $(document).ready(function(){
   })
 
   movingText.type("marca").go()
-  movingText.delete().go()
+  movingText.empty().go();
   movingText.type("producto").go()
-  movingText.delete().go()
+  movingText.empty().go();
   movingText.type("evento").go()
 
   // we call the function
