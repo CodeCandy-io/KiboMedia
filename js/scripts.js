@@ -1,5 +1,3 @@
-import TypeIt from "typeit";
-
 function scrollFades(){
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
