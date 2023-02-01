@@ -87,10 +87,10 @@ $(document).ready(function(){
     speed: 50
   })
 
-  movingText.type("marca").go()
-  movingText.empty().go();
-  movingText.type("producto").go()
-  movingText.empty().go();
+  movingText.type("marca")
+  movingText.empty()
+  movingText.type("producto")
+  movingText.empty()
   movingText.type("evento").go()
 
   // we call the function
