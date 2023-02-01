@@ -83,17 +83,6 @@ function hideModal(){
 
 
 $(document).ready(function(){
-  const movingText = new TypeIt("#roulette", {
-    speed: 1
-  })
-
-  movingText.type("marca")
-  movingText.empty()
-  movingText.type("producto")
-  movingText.empty()
-  movingText.type("evento").go()
-  movingText.reset()
-
   // we call the function
   scrollFades();
   clickAnchor();
@@ -104,4 +93,16 @@ $(document).ready(function(){
     var el = $(this);
     copyToClipboard(text, el);
   });
+
+  const movingText = new TypeIt("#roulette", {
+    speed: 1
+  })
+
+  while (i = 1 < 2) {
+    movingText.type("marca")
+    movingText.empty()
+    movingText.type("producto")
+    movingText.empty()
+    movingText.type("evento").go()
+  }
 })
