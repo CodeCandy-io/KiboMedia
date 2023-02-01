@@ -83,9 +83,19 @@ function hideModal(){
 
 
 $(document).ready(function(){
-  new TypeIt("#roulette", {
-    strings: ["marca", "producto", "evento"]
-  }).go()
+  const movingText = new TypeIt("#roulette", {
+    speed: 50
+  })
+
+  movingText
+    .type("marca")
+    .delete()
+    .type("producto")
+    .delete()
+    .type("evento")
+    .go()
+
+  movingText.reset()
   // we call the function
   scrollFades();
   clickAnchor();
