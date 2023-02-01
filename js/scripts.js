@@ -95,7 +95,7 @@ $(document).ready(function(){
   });
 
   const movingText = new TypeIt("#roulette", {
-    speed: 1
+    speed: 1000
   })
 
   while (i = 1 < 2) {
