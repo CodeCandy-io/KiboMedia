@@ -84,7 +84,7 @@ function hideModal(){
 
 $(document).ready(function(){
   const movingText = new TypeIt("#roulette", {
-    speed: 50
+    speed: 10
   })
 
   movingText.type("marca")
