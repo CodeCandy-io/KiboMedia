@@ -83,9 +83,8 @@ function hideModal(){
 
 
 $(document).ready(function(){
-  console.log("Are we here?")
   new TypeIt("#roulette", {
-    strings: "marca"
+    strings: ["marca", "producto", "evento"]
   }).go()
   // we call the function
   scrollFades();
