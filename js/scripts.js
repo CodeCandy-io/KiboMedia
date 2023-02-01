@@ -1,3 +1,5 @@
+import Typed from 'typed.js';
+
 function scrollFades(){
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
