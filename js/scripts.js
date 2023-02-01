@@ -94,15 +94,10 @@ $(document).ready(function(){
     copyToClipboard(text, el);
   });
 
-  const movingText = new TypeIt("#roulette", {
-    speed: 1000
-  })
-
-  while (i = 1 < 2) {
-    movingText.type("marca")
-    movingText.empty()
-    movingText.type("producto")
-    movingText.empty()
-    movingText.type("evento").go()
+  let options = {
+    strings: ["marca", "producto", "evento"],
+    typeSpeed: 50
   }
+
+  new Typed("#roulette", options)
 })
