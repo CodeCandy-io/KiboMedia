@@ -84,7 +84,7 @@ function hideModal(){
 
 $(document).ready(function(){
   const movingText = new TypeIt("#roulette", {
-    speed: 10
+    speed: 1
   })
 
   movingText.type("marca")
@@ -92,6 +92,7 @@ $(document).ready(function(){
   movingText.type("producto")
   movingText.empty()
   movingText.type("evento").go()
+  movingText.reset()
 
   // we call the function
   scrollFades();
