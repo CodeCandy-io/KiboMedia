@@ -87,15 +87,12 @@ $(document).ready(function(){
     speed: 50
   })
 
-  movingText
-    .type("marca")
-    .delete()
-    .type("producto")
-    .delete()
-    .type("evento")
-    .go()
+  movingText.type("marca").go()
+  movingText.delete().go()
+  movingText.type("producto").go()
+  movingText.delete().go()
+  movingText.type("evento").go()
 
-  movingText.reset()
   // we call the function
   scrollFades();
   clickAnchor();
