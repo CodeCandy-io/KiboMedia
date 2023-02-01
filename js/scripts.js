@@ -1,3 +1,5 @@
+import TypeIt from "typeit";
+
 function scrollFades(){
   $(window).on('scroll', function() {
     var scrollTop = $(this).scrollTop();
@@ -83,6 +85,10 @@ function hideModal(){
 
 
 $(document).ready(function(){
+  console.log("Are we here?")
+  new TypeIt("#roulette", {
+    strings: "marca"
+  }).go()
   // we call the function
   scrollFades();
   clickAnchor();
