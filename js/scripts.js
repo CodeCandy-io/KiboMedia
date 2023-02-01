@@ -101,5 +101,5 @@ $(document).ready(function(){
     typeSpeed: 50
   }
 
-  new Typed("#roulette", options)
+  const movingText = new Typed("#roulette", options)
 })
