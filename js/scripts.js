@@ -96,7 +96,9 @@ $(document).ready(function(){
 
   let options = {
     strings: ["marca", "producto", "evento"],
-    typeSpeed: 50
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
   }
 
   const movingText = new Typed("#roulette", options)
