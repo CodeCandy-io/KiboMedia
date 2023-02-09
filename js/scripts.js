@@ -93,4 +93,13 @@ $(document).ready(function(){
     var el = $(this);
     copyToClipboard(text, el);
   });
+
+  let options = {
+    strings: ["marca", "producto", "evento"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+  }
+
+  const movingText = new Typed("#roulette", options)
 })
