@@ -1,5 +1,6 @@
 .a-svg-line {
   width: 100%;
+  opacity: 0;
 }
 
 .a-svg-line--events {

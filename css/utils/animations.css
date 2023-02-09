@@ -15,12 +15,17 @@
 }
 
 .-rotate-left {
+	transition: transform 380ms ease-out;
 	animation-name: rotateLeft;
 	animation-duration: 300ms;
 	animation-iteration-count: once;
 	animation-timing-function: linear;
     position: relative;
 	transform: rotate(-4deg);
+}
+
+.-rotate-left:hover {
+    transform: rotate(-1deg);
 }
 
 @keyframes rotateLeft {
@@ -33,12 +38,17 @@
 }
 
 .-rotate-right {
+	transition: transform 380ms ease-out;
 	animation-name: rotateRight;
 	animation-duration: 300ms;
 	animation-iteration-count: once;
 	animation-timing-function: linear;
     position: relative;
 	transform: rotate(4deg);
+}
+
+.-rotate-right:hover {
+    transform: rotate(1deg);
 }
 
 @keyframes rotateRight {

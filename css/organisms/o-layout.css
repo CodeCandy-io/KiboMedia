@@ -9,6 +9,10 @@
     font-size: var(--fs-m-s);
 }
 
+.o-layout__cell--quote {
+    padding: 72px 0;
+}
+
 .o-layout__cell-pill {
     display: inline-block;
     margin: 8px 7px 8px 0;
@@ -30,6 +34,10 @@
         display: flex;
         flex: 1;
         font-size: var(--fs-m);
+    }
+
+    .o-layout__cell--quote {
+        padding: 220px 0 420px;
     }
 
     .o-layout__cell-pill {

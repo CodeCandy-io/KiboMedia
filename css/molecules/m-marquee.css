@@ -27,6 +27,7 @@
 .m-marquee--left {
     transform: rotate(3deg);
 }
+
   
 @keyframes marquee {
     from { transform: translateX(0); }
