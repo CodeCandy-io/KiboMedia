@@ -45,3 +45,21 @@
     /* start at 0 and end at 20% */
     var(--c-nuclear-color) 0);
 }
+
+
+/* /BACKGROUND IMAGES */
+
+.-bg-image {
+    width: 100%;
+    position: absolute;
+}
+
+.-bg-image--right{
+    right: 0;
+}
+
+@media (min-width: 1020px) {
+    .-bg-image {
+        width: inherit;
+    }
+}

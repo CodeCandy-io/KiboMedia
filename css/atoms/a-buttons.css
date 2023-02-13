@@ -8,15 +8,21 @@
 
 .a-btn--contact {
     position: fixed;
-    right: 16px;
+    right: 32px;
     bottom: 16px;
-    left: 16px;
+    left: 32px;
     border: 1px solid var(--c-text-color);
-    padding: 24px 48px;
+    padding: 16px 48px;
     background-color: var(--c-gold-color);
     font-size: 24px;
     text-align: center;
-    z-index: 100;
+    z-index: 10;
+}
+
+.a-btn--header {
+    border: 1px solid var(--c-text-color);
+    padding: 8px 16px;
+    background-color: var(--c-gold-color);
 }
 
 

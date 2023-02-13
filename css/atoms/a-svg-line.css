@@ -1,5 +1,7 @@
 .a-svg-line {
   width: 100%;
+  height: auto;
+  margin: 32px 0;
   opacity: 0;
 }
 
@@ -14,7 +16,9 @@
 
 @media screen and (min-width: 1020px) {
   .a-svg-line {
+    margin: 0;
     width: max-content;
+    height: inherit;
   }
 }
 
