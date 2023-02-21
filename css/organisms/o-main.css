@@ -42,6 +42,10 @@
   padding: 120px 0;
 }
 
+.o-main__inner--quote {
+  background-image: linear-gradient(var(--c-nuclear-color), var(--c-gold-color-light));
+}
+
 @media (min-width: 820px) {
   .o-main__inner {
     padding: 0 16px;

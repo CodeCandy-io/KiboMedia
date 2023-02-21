@@ -18,6 +18,9 @@
     font-weight: 900;
     color: var(--c-bg-color);
     text-shadow: #000 0px 0px 2px;
+    width: 200%;
+    height: 220px;
+    background-repeat: repeat-x;
 }
 
 .m-marquee--right {
@@ -28,6 +31,22 @@
     transform: rotate(3deg);
 }
 
+
+.-bg--gold-light .m-marquee__track {
+    background-image: url("../../images/img-marq-eventos.svg");
+}
+
+.-bg--banana .m-marquee__track {
+    background-image: url("../../images/img-marq-prensa.svg");
+}
+
+.-bg--cheddar .m-marquee__track {
+    background-image: url("../../images/img-marq-relaciones.svg");
+}
+
+.-bg--watermelon .m-marquee__track {
+    background-image: url("../../images/img-marq-relaciones.svg");
+}
 
 
 @media (min-width: 1020px) {
@@ -45,7 +64,7 @@
 
 @media screen and (min-width: 1020px) {
     .m-marquee {
-        padding: 320px 0;
+        padding: 120px 0 320px;
         font-size: 172px;
     }
 }

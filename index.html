@@ -15,16 +15,13 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
 
   <body>
-
     <!--MENU-->
-
-    <div class="o-menu o-menu--is-displayed">
+    <div id="menu" class="o-menu">
       <div class="o-menu__inner">
-        <div class="o-menu__close-link -uppercase">Cerrar</div>
+        <div id="menuClose" class="o-menu__close-link -uppercase">Cerrar</div>
         <div class="o-menu__wrapper">
           <div class="o-menu__cell">
             <p class="o-menu__cell--name">Kibo<br>Media<br>Comunicación</p>
@@ -44,12 +41,9 @@
               <li class="o-menu__cell--link">Contacto</li>
               <li class="o-menu__cell--link">Blog</li>
             </ol>
-
           </div>
         </div>
-
       </div>
-
     </div>
 
 
@@ -75,7 +69,7 @@
         <div class="-bg-half">
           <div class="o-main__inner o-main__inner--reset">
             <div class="o-splash">
-              <h2 class="o-splash__title">El mejor<br><img class="o-splash--icon" src="images/ic-arrow.svg">escaparate<br>para tu <span class="o-splash--wordly">marca</span></h2>
+              <h2 class="o-splash__title">El mejor<br><img class="o-splash--icon" src="images/ic-arrow.svg">escaparate<br>para tu <span id="roulette" class="o-splash--wordly"></span></h2>
               <a href="#contact" class="a-btn a-btn--contact -uppercase -js-contact-trigger">Contacta</a>
               <img class="o-splash--image" src="images/img-main-holder.png">
             </div>
@@ -100,14 +94,13 @@
           </div>
           <div class="o-splash__sub-header--cell">
             <a href="#contact" class="a-btn a-btn--header -uppercase -js-contact-trigger">Contacta</a>
-            <span class="-nav-item -js-contact-trigger-nav">Menu</span>
-            
+            <span id="menuButton" class="-nav-item -js-contact-trigger-nav">Menu</span>
           </div>
         </nav>
       </header>
       <!--SERVICES BLOCK-->
-      <div class="o-main__wrapper">
-        <div class="o-main__inner o-main__inner--quote">
+      <div class="o-main__wrapper o-main__inner--quote">
+        <div class="o-main__inner">
           <div class="o-layout">
             <div class="o-layout__row">
               <div class="o-layout__cell o-layout__cell--quote o-layout__cell--triple">
@@ -124,7 +117,7 @@
       <div class="-bg -bg--gold-light">
         <div class="m-marquee m-marquee--right">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
         
@@ -166,7 +159,7 @@
       <div class="-bg -bg--banana">
         <div class="m-marquee m-marquee--left">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
         
@@ -211,7 +204,7 @@
       <div class="-bg -bg--cheddar">
         <div class="m-marquee m-marquee--right">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
 
@@ -254,7 +247,7 @@
       <div class="-bg -bg--watermelon">
         <div class="m-marquee m-marquee--left">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
 
@@ -416,6 +409,9 @@
       </div>
       <p class="-centered">Kibo Media 2023© All rights reserved</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
 
