@@ -1,9 +1,9 @@
 .-bg {
-    overflow: hidden;
-    padding: 48px 0;
+    padding: 0 0 32px;
 }
 
 .-bg--amber {
+    overflow: hidden;
     background-color: var(--c-amber-color);
 }
 
@@ -50,7 +50,7 @@
 /* /BACKGROUND IMAGES */
 
 .-bg-image {
-    width: 100%;
+    width: 80%;
     position: absolute;
 }
 
@@ -61,8 +61,5 @@
 @media (min-width: 1020px) {
     .-bg {
         padding: 0;
-    }
-    .-bg-image {
-        width: inherit;
     }
 }
