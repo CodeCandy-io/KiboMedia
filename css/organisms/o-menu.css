@@ -99,10 +99,9 @@
     }
 
     .o-menu__cell--link {
-        font-size: 110px;
+        font-size: 90px;
         font-weight: bold;
-        padding: 24px;
-        font-size: 24px;
+        padding: 8px 16px;
     }
 
     .o-menu__cell:first-child {
