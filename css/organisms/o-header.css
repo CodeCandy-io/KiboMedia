@@ -2,6 +2,7 @@
   position: relative;
   z-index: 101;
   background-color: var(--c-nuclear-color);
+  font-size: 20px;
 }
 
 .o-header--sticky {
