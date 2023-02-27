@@ -1,5 +1,8 @@
 .o-header {
-  z-index: 11;
+  position: relative;
+  z-index: 101;
+  background-color: var(--c-nuclear-color);
+  font-size: 20px;
 }
 
 .o-header--sticky {
@@ -9,7 +12,7 @@
 
 .o-header--logo {
   width: auto;
-  height: 72px;
+  height: 56px;
 }
 
 .o-header__inner {

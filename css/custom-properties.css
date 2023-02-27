@@ -15,20 +15,22 @@ FONTS AND VARIABLES
 @font-face {
   font-family: 'SpaceGrotesk';
   src: 
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('embedded-opentype'),
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('woff'),
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'),
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('svg');
+      url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.otf?#iefix') format('embedded-opentype'),
+      url('../fonts/grotesk/SpaceGrotesk-VariableFont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.woff') format('woof'),
+      url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'),
+      url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.svg#icomoonregular') format('svg');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'SpaceGroteskBold';
   src: 
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('embedded-opentype'),
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('woff'),
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'),
-         url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('svg');
+    url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.otf?#iefix') format('embedded-opentype'),
+    url('../fonts/grotesk/SpaceGrotesk-VariableFont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.woff') format('woof'),
+    url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.ttf') format('truetype'),
+    url('../fonts/grotesk/SpaceGrotesk-VariableFont_wght.svg#icomoonregular') format('svg');
   font-weight: bold;
 }
 

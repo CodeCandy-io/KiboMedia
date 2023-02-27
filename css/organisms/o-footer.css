@@ -45,13 +45,13 @@
     .o-footer__inner {
         display: flex;
         flex-direction: row;
-        max-width: 1546px;
+        max-width: 1200px;
         margin: 0 auto 80px;
     }
 
     .o-footer__cell--small {
         margin-bottom: 0;
-        font-size: 56px;
+        padding-top: 32px;
     }
 
     .o-footer  .o-layout__cell {

@@ -6,6 +6,15 @@
     color: var(--c-text-color);
 }
 
+.a-btn--mobile--trigger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    padding: 8px;
+    z-index: 100;
+}
+
 .a-btn--contact {
     position: fixed;
     right: 32px;
@@ -31,16 +40,28 @@
         margin: 0 auto;
         transition: all 280ms ease-in-out;
         position: absolute;
-        top: 146px;
+        top: 180px;
         right: 16px;
         bottom: auto;
         left: auto;
-        padding: 24px 48px;
-        font-size: 40px;
+        padding: 16px 32px;
+        font-size: 32px;
+    }
+
+    .a-btn--mobile--trigger {
+        display: none;
     }
 
     .a-btn--contact:hover {
         background-color: var(--c-text-color);
         color: var(--c-gold-color);
+    }
+}
+
+
+@media screen and (min-width: 1900px) {
+    .a-btn--contact {
+        padding: 24px 48px;
+        font-size: 40px;
     }
 }

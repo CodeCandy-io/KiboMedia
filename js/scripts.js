@@ -39,6 +39,21 @@ function clickAnchor(){
   });
 }
 
+
+const openMenuMobile = () => {
+  const menuButton = document.getElementById("menuButtonMobile")
+  const menu = document.getElementById("menu")
+
+  if (menuButton) {
+    menuButton.addEventListener('click', () => {
+      menu.classList.add("o-menu--is-displayed")
+
+      const closeButton = document.getElementById("menuClose")
+      closeButton.addEventListener('click', () => menu.classList.remove("o-menu--is-displayed"))
+    })
+  }
+}
+
 const openMenu = () => {
   const menuButton = document.getElementById("menuButton")
   const menu = document.getElementById("menu")
@@ -100,6 +115,7 @@ $(document).ready(function(){
   clickAnchor();
   hideModal();
   openMenu();
+  openMenuMobile();
 
   $('.-js-copy').click(function() {
     var text = $(this).attr('data-copy');

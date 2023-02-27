@@ -45,7 +45,7 @@
     .m-kpi-list__image {
         position: absolute;
         top: -120px;
-        max-width: 520px;
+        max-width: 320px;
         margin: 0 auto;
     }
 
@@ -53,4 +53,16 @@
         right: 0;
     }
     
+}
+
+@media screen and (min-width: 1200px) {
+    .m-kpi-list__image {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .m-kpi-list__image {
+        max-width: 480px;
+    }
 }
