@@ -24,7 +24,6 @@ function clickAnchor(){
   });
 }
 
-
 const openMenuMobile = () => {
   const menuButton = document.getElementById("menuButtonMobile")
   const menu = document.getElementById("menu")
