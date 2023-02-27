@@ -1,40 +1,25 @@
-function scrollFades(){
-  $(window).on('scroll', function() {
-    var scrollTop = $(this).scrollTop();
-    $('.-fade-in').each(function() {
-        var topDistance = $(this).offset().top;
-
-        if ( (topDistance-850) < scrollTop ) {
-          $(this).addClass('-reveal');
-        } else {
-          $(this).removeClass('-reveal');
-        }
-    });
-  });
-}
-
 function clickAnchor(){
   $(".-js-contact-trigger").click(function() {
     $('html, body').animate({
-      scrollTop: $(".-js-contact").offset().top
+      scrollTop: $(".-js-contact").offset().top()
     }, 2000);
   });
 
   $(".-js-contact-trigger-nav").click(function() {
     $('html, body').animate({
-      scrollTop: $(".-js-contact").offset().top
+      scrollTop: $(".-js-contact").offset().top()
     }, 2000);
   });
 
   $(".-js-contact-trigger-yours").click(function() {
     $('html, body').animate({
-      scrollTop: $(".-js-contact").offset().top
+      scrollTop: $(".-js-contact").offset().top()
     }, 1200);
   });
 
   $(".-js-about-trigger").click(function() {
     $('html, body').animate({
-      scrollTop: $(".-js-about").offset().top
+      scrollTop: $(".-js-about").offset().top()
     }, 1200);
   });
 }
@@ -53,13 +38,28 @@ const openMenu = () => {
   }
 }
 
+document.addEventListener('DOMContentLoaded',() => {
+  clickAnchor()
+  openMenu();
+
+  let options = {
+    strings: ["marca", "producto", "evento"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+  }
+
+  const movingText = new Typed("#roulette", options)
+})
+
+
 // COPY TO CLIPBOARD
 // Attempts to use .execCommand('copy') on a created text field
 // Falls back to a selectable alert if not supported
 // Attempts to display status in Bootstrap tooltip
 // ------------------------------------------------------------------------------
 
-function copyToClipboard(text, el) {
+/*function copyToClipboard(text, el) {
   var copyTest = document.queryCommandSupported('copy');
   var elOriginalText = el.attr('data-original-title');
 
@@ -81,38 +81,10 @@ function copyToClipboard(text, el) {
     // Fallback if browser doesn't support .execCommand('copy')
     window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
   }
-  
+
   $('.o-footer__copy-email--success').addClass('-is-visible');
 
-  setTimeout(function () { 
+  setTimeout(function () {
     $('.o-footer__copy-email--success').removeClass('-is-visible');
   }, 1500);
-}
-
-
-function hideModal(){
-  $('.-js-loader').delay(4400).fadeOut();
-}
-
-$(document).ready(function(){
-  // we call the function
-  scrollFades();
-  clickAnchor();
-  hideModal();
-  openMenu();
-
-  $('.-js-copy').click(function() {
-    var text = $(this).attr('data-copy');
-    var el = $(this);
-    copyToClipboard(text, el);
-  });
-
-  let options = {
-    strings: ["marca", "producto", "evento"],
-    typeSpeed: 100,
-    backSpeed: 50,
-    loop: true
-  }
-
-  const movingText = new Typed("#roulette", options)
-})
+}*/
