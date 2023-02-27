@@ -1,4 +1,4 @@
-function clickAnchor(){
+/*function clicksAnchor(){
   $(".-js-contact-trigger").click(function() {
     $('html, body').animate({
       scrollTop: $(".-js-contact").offset().top()
@@ -22,6 +22,39 @@ function clickAnchor(){
       scrollTop: $(".-js-about").offset().top()
     }, 1200);
   });
+}*/
+
+const scrollToSection = navButtonId => {
+  const sections = {
+    "mainNavComm": ".-js-contact",
+    "mainNavServices": ".-js-services",
+    "mainNavValues": ".-js-values"
+  }
+  const navBar = document.getElementsByTagName('Header')[0]
+  const targetSection = document.querySelector(sections[navButtonId])
+
+  const navBarHeight = navBar.offsetHeight
+  const sectionPosition = targetSection.getBoundingClientRect().top
+  const offsetPosition = sectionPosition + window.scrollY - navBarHeight
+
+  scroll({
+    top: offsetPosition,
+    behavior: 'smooth'
+  })
+}
+
+const clickAnchor = () => {
+  const commLink = document.getElementById('mainNavComm')
+  const serviceLink = document.getElementById('mainNavServices')
+  const valueLink = document.getElementById('mainNavValues')
+
+  const menuLinks = [commLink, serviceLink, valueLink]
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      scrollToSection(event.target.id)
+    })
+  })
 }
 
 const openMenuMobile = () => {
@@ -66,40 +99,3 @@ document.addEventListener('DOMContentLoaded',() => {
 
   const movingText = new Typed("#roulette", options)
 })
-
-
-// COPY TO CLIPBOARD
-// Attempts to use .execCommand('copy') on a created text field
-// Falls back to a selectable alert if not supported
-// Attempts to display status in Bootstrap tooltip
-// ------------------------------------------------------------------------------
-
-/*function copyToClipboard(text, el) {
-  var copyTest = document.queryCommandSupported('copy');
-  var elOriginalText = el.attr('data-original-title');
-
-  if (copyTest === true) {
-    var copyTextArea = document.createElement("textarea");
-    copyTextArea.value = text;
-    document.body.appendChild(copyTextArea);
-    copyTextArea.select();
-    try {
-      var successful = document.execCommand('copy');
-      var msg = successful ? 'Copied!' : 'Whoops, not copied!';
-      el.attr('data-original-title', msg).tooltip('show');
-    } catch (err) {
-      console.log('Oops, unable to copy');
-    }
-    document.body.removeChild(copyTextArea);
-    el.attr('data-original-title', elOriginalText);
-  } else {
-    // Fallback if browser doesn't support .execCommand('copy')
-    window.prompt("Copy to clipboard: Ctrl+C or Command+C, Enter", text);
-  }
-
-  $('.o-footer__copy-email--success').addClass('-is-visible');
-
-  setTimeout(function () {
-    $('.o-footer__copy-email--success').removeClass('-is-visible');
-  }, 1500);
-}*/

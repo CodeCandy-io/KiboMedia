@@ -58,9 +58,9 @@
     <span id="menuButtonMobile" class="a-btn--mobile--trigger -nav-item -js-contact-trigger-nav">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <line x1="4" y1="6" x2="20" y2="6" />
-        <line x1="4" y1="12" x2="20" y2="12" />
-        <line x1="4" y1="18" x2="20" y2="18" />
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
       </svg>
     </span>
 
@@ -71,9 +71,9 @@
           <p>Comunica y organiza tu evento con un equipo top ✨👌</p>
         </div>
         <div class="o-splash__sub-header--cell">
-          <span class="-nav-item -js-contact-trigger-nav">Comunica</span>
-          <span class="-nav-item -js-about-trigger">Servicios</span>
-          <span class="-nav-item -js-values-trigger">Valores</span>
+          <span id="mainNavComm" class="-nav-item -js-contact-trigger-nav">Comunica</span>
+          <span id="mainNavServices" class="-nav-item -js-about-trigger">Servicios</span>
+          <span id="mainNavValues" class="-nav-item -js-values-trigger">Valores</span>
           
         </div>
       </div>
@@ -120,7 +120,7 @@
         <div class="o-main__inner">
           <div class="o-layout">
             <div class="o-layout__row">
-              <div class="o-layout__cell o-layout__cell--quote o-layout__cell--triple">
+              <div class="o-layout__cell o-layout__cell--quote o-layout__cell--triple -js-services">
                 <p class="a-quote">Ofrecemos <span class="-highlight-dark">servicios integrales para dar respuesta a todas tus necesidades</span>: eventos, relaciones públicas, prensa, marketing, consultoría y social media.</p>
                 <p class="a-quote -highlight"><span class="-highlight"><br>Somos un equipo de comunicación especializado en todos los sectores.</span></p>
               </div>
@@ -171,7 +171,6 @@
         </div>
       </div>
 
-
       <!--PRESS BLOCK-->
       <div class="-bg -bg--banana">
         <div class="m-marquee m-marquee--left m-marquee--space">
@@ -185,7 +184,7 @@
           <div class="o-main__inner">
             <div class="o-layout">
               <div class="o-layout__row">
-                <div class="o-layout__cell">
+                <div class="o-layout__cell -js-values">
                   <p class="-small -pearl -uppercase">Que se oiga tu voz</p>
                   <p class="a-title a-title--m"><span class="-highlight-dark -bold">Prensa</span></p>
                   <p>El mejor escaparate para lanzar tu producto o marca es comunicarlo y por eso nos involucramos.</p>
@@ -204,7 +203,6 @@
                     <path class="a-svg-line--events-vortex" d="M351.242 314.09C354.158 342.48 373.481 358.538 396.151 371.427" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
                     <path class="a-svg-line--events-vortex" d="M395.75 371.582C372.088 355.626 347.377 360.167 322.955 369.31" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
                   </svg>
-                    
                 </div>
               </div>
             </div>
@@ -215,7 +213,6 @@
           </div> 
         </div>
       </div>
-
 
       <!--RRPP BLOCK-->
       <div class="-bg -bg--cheddar">
@@ -305,7 +302,6 @@
         </div>
       </div>
 
-
       <!--NUMBERS BLOCK-->
       <div class="-bg -bg--amber">        
         <div class="o-main__wrapper">
@@ -337,8 +333,7 @@
       <!--CLOSE BLOCK-->
       <div class="o-main__wrapper">
         <div class="-bg-half">
-          <div class="o-main__inner o-main__inner--reset
-          ">
+          <div class="o-main__inner o-main__inner--reset">
             <div class="o-splash">
               <img class="o-splash--image" src="images/img-dummy-bar.png">
               <br>
@@ -400,10 +395,6 @@
         </div>
       </div>
 
-
-
-      
-      
       <!--END MAIN WRAPPER-->
     </main>
     <footer class="o-footer">
@@ -434,5 +425,3 @@
     <script src="./js/scripts.js"></script>
   </body>
 </html>
-
-
