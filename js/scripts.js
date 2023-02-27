@@ -11,9 +11,9 @@ const scrollToSection = navButtonId => {
   const sectionPosition = targetSection.getBoundingClientRect().top
   const offsetPosition = sectionPosition + window.scrollY - navBarHeight
 
-  scroll({
-    top: offsetPosition,
-    behavior: 'smooth'
+  targetSection.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
   })
 }
 
