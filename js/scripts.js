@@ -1,29 +1,3 @@
-/*function clicksAnchor(){
-  $(".-js-contact-trigger").click(function() {
-    $('html, body').animate({
-      scrollTop: $(".-js-contact").offset().top()
-    }, 2000);
-  });
-
-  $(".-js-contact-trigger-nav").click(function() {
-    $('html, body').animate({
-      scrollTop: $(".-js-contact").offset().top()
-    }, 2000);
-  });
-
-  $(".-js-contact-trigger-yours").click(function() {
-    $('html, body').animate({
-      scrollTop: $(".-js-contact").offset().top()
-    }, 1200);
-  });
-
-  $(".-js-about-trigger").click(function() {
-    $('html, body').animate({
-      scrollTop: $(".-js-about").offset().top()
-    }, 1200);
-  });
-}*/
-
 const scrollToSection = navButtonId => {
   const sections = {
     "mainNavComm": ".-js-contact",
