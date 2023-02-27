@@ -1,13 +1,21 @@
 .a-svg-line {
-  width: 100%;
+  max-width: 320px;
   height: auto;
   margin: 32px 0;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .a-svg-line--events {
   stroke-dasharray: 1000;
   animation: eventsLine 0.8s linear;
+}
+
+
+.a-svg-line--vert {
+  position: relative;
+  height: 120px;
+  left: 120px;
+  margin: 0;
 }
 
 .a-svg-line--events-vortex {
@@ -17,10 +25,21 @@
 @media screen and (min-width: 1020px) {
   .a-svg-line {
     margin: 0;
-    width: max-content;
     height: inherit;
   }
+
+  .a-svg-line--vert {
+    height: 220px;
+    left: -50px;
+  }
+
+  .a-svg-line--footer {
+    position: relative;
+    top: -72px;
+    left: 310px;
+  }
 }
+
 
 @keyframes eventsLine {
   0% {
