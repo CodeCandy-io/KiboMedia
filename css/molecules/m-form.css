@@ -52,8 +52,16 @@
     right: auto;
 }
 
+.o-main__inner--form .a-quote--xl {
+    font-size: 48px;
+}
+
 @media (min-width: 1020px) {
     .m-form {
         margin: 0 72px; 
+    }
+
+    .o-main__inner--form .a-quote--xl {
+        font-size: 72px;
     }
   }
