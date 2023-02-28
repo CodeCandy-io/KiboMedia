@@ -1,14 +1,14 @@
 .-bg {
-    overflow: hidden;
-    padding: 48px 0;
+    padding: 0 0 32px;
 }
 
 .-bg--amber {
+    overflow: hidden;
     background-color: var(--c-amber-color);
 }
 
 .-bg--gold-light {
-    background-color: var(--c-gold-color-light);
+    background: linear-gradient(var(--c-gold-color-light), var(--c-banana-color));
 }
 
 .-bg--gold-light .m-marquee__track {
@@ -16,7 +16,7 @@
 }
 
 .-bg--banana {
-    background-color: var(--c-banana-color);
+    background: linear-gradient(var(--c-banana-color), var(--c-cheddar-color));
 }
 
 .-bg--banana .m-marquee__track {
@@ -24,7 +24,7 @@
 }
 
 .-bg--cheddar {
-    background-color: var(--c-cheddar-color);
+    background: linear-gradient(var(--c-cheddar-color), var(--c-watermelon-color));
 }
 
 .-bg--cheddar .m-marquee__track {
@@ -32,7 +32,7 @@
 }
 
 .-bg--watermelon {
-    background-color: var(--c-watermelon-color);
+    background: linear-gradient(var(--c-watermelon-color), var(--c-amber-color));
 }
 
 .-bg--watermelon .m-marquee__track {
@@ -50,7 +50,7 @@
 /* /BACKGROUND IMAGES */
 
 .-bg-image {
-    width: 100%;
+    width: 80%;
     position: absolute;
 }
 
@@ -59,7 +59,7 @@
 }
 
 @media (min-width: 1020px) {
-    .-bg-image {
-        width: inherit;
+    .-bg {
+        padding: 0;
     }
 }

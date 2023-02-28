@@ -1,12 +1,11 @@
 .m-marquee {
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     width: 100vw;
     max-width: 100%;
     height: 100px;
     margin: 0 auto;
-    padding: 72px 0;
-    font-size: 72px;
+    padding: 0 0 72px;
     font-family: var(--f-text-bold);
 }
 
@@ -18,6 +17,11 @@
     font-weight: 900;
     color: var(--c-bg-color);
     text-shadow: #000 0px 0px 2px;
+    width: 200%;
+    height: 56px;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .m-marquee--right {
@@ -28,6 +32,26 @@
     transform: rotate(3deg);
 }
 
+.m-marquee--space {
+    padding-top: 48px;
+}
+
+
+.-bg--gold-light .m-marquee__track {
+    background-image: url("../../images/img-marq-eventos.svg");
+}
+
+.-bg--banana .m-marquee__track {
+    background-image: url("../../images/img-marq-prensa.svg");
+}
+
+.-bg--cheddar .m-marquee__track {
+    background-image: url("../../images/img-marq-relaciones.svg");
+}
+
+.-bg--watermelon .m-marquee__track {
+    background-image: url("../../images/img-marq-relaciones.svg");
+}
 
 
 @media (min-width: 1020px) {
@@ -36,7 +60,15 @@
     }
 }
 
-  
+
+@media (min-width: 1500px) {
+    .m-marquee__track {
+        height: 100px;
+    }
+}
+
+
+
 @keyframes marquee {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
@@ -45,7 +77,6 @@
 
 @media screen and (min-width: 1020px) {
     .m-marquee {
-        padding: 320px 0;
         font-size: 172px;
     }
 }

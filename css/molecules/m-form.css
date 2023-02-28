@@ -26,7 +26,7 @@
     transition: border 180ms ease;
     box-sizing: border-box;
     appearance: none;
-    padding: 24px 16px;
+    padding: 16px;
     background-color: transparent;
     border: 1px solid var(--c-nuclear-color);
     color: var(--c-nuclear-color);

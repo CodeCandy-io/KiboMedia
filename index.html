@@ -12,19 +12,25 @@
     <meta property="og:url" content="">
     <meta property="og:description" content="Kibo media communication">
     <meta property="og:image" content="">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
 
   <body>
-
     <!--MENU-->
-
-    <div class="o-menu o-menu--is-displayed">
+    <div id="menu" class="o-menu">
       <div class="o-menu__inner">
-        <div class="o-menu__close-link -uppercase">Cerrar</div>
+        <div id="menuClose" class="o-menu__close-link -uppercase">Cerrar</div>
         <div class="o-menu__wrapper">
           <div class="o-menu__cell">
             <p class="o-menu__cell--name">Kibo<br>Media<br>Comunicación</p>
@@ -44,14 +50,19 @@
               <li class="o-menu__cell--link">Contacto</li>
               <li class="o-menu__cell--link">Blog</li>
             </ol>
-
           </div>
         </div>
-
       </div>
-
     </div>
 
+    <span id="menuButtonMobile" class="a-btn--mobile--trigger -nav-item -js-contact-trigger-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <line x1="4" y1="6" x2="20" y2="6"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="18" x2="20" y2="18"/>
+      </svg>
+    </span>
 
     <div class="o-header">
       <h1 class="a-title a-title--xxl -uppercase">Kibo·media</h1>
@@ -60,9 +71,9 @@
           <p>Comunica y organiza tu evento con un equipo top ✨👌</p>
         </div>
         <div class="o-splash__sub-header--cell">
-          <span class="-nav-item -js-contact-trigger-nav">Comunica</span>
-          <span class="-nav-item -js-about-trigger">Servicios</span>
-          <span class="-nav-item -js-values-trigger">Valores</span>
+          <span id="mainNavComm" class="-nav-item -js-contact-trigger-nav">Comunica</span>
+          <span id="mainNavServices" class="-nav-item -js-about-trigger">Servicios</span>
+          <span id="mainNavValues" class="-nav-item -js-values-trigger">Valores</span>
           
         </div>
       </div>
@@ -75,7 +86,7 @@
         <div class="-bg-half">
           <div class="o-main__inner o-main__inner--reset">
             <div class="o-splash">
-              <h2 class="o-splash__title">El mejor<br><img class="o-splash--icon" src="images/ic-arrow.svg">escaparate<br>para tu <span class="o-splash--wordly">marca</span></h2>
+              <h2 class="o-splash__title">El mejor<br><img class="o-splash--icon" src="images/ic-arrow.svg">escaparate<br>para tu <span id="roulette" class="o-splash--wordly"></span></h2>
               <a href="#contact" class="a-btn a-btn--contact -uppercase -js-contact-trigger">Contacta</a>
               <img class="o-splash--image" src="images/img-main-holder.png">
             </div>
@@ -100,14 +111,13 @@
           </div>
           <div class="o-splash__sub-header--cell">
             <a href="#contact" class="a-btn a-btn--header -uppercase -js-contact-trigger">Contacta</a>
-            <span class="-nav-item -js-contact-trigger-nav">Menu</span>
-            
+            <span id="menuButton" class="-nav-item -js-contact-trigger-nav">Menu</span>
           </div>
         </nav>
       </header>
       <!--SERVICES BLOCK-->
-      <div class="o-main__wrapper">
-        <div class="o-main__inner o-main__inner--quote">
+      <div class="o-main__wrapper o-main__inner--quote -js-services">
+        <div class="o-main__inner">
           <div class="o-layout">
             <div class="o-layout__row">
               <div class="o-layout__cell o-layout__cell--quote o-layout__cell--triple">
@@ -124,7 +134,7 @@
       <div class="-bg -bg--gold-light">
         <div class="m-marquee m-marquee--right">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - Eventos - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
         
@@ -161,12 +171,11 @@
         </div>
       </div>
 
-
       <!--PRESS BLOCK-->
       <div class="-bg -bg--banana">
-        <div class="m-marquee m-marquee--left">
+        <div class="m-marquee m-marquee--left m-marquee--space">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - Prensa - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
         
@@ -176,7 +185,7 @@
             <div class="o-layout">
               <div class="o-layout__row">
                 <div class="o-layout__cell">
-                  <p class="-small -pearl -uppercase">Que se oiga tu voz</p>
+                  <p class="-small -pearl -uppercase -js-values">Que se oiga tu voz</p>
                   <p class="a-title a-title--m"><span class="-highlight-dark -bold">Prensa</span></p>
                   <p>El mejor escaparate para lanzar tu producto o marca es comunicarlo y por eso nos involucramos.</p>
                   <a class="a-link a-link--primary" href="#">¿Qué necesitas contar?</a>
@@ -189,12 +198,11 @@
                 <div class="o-layout__cell">
                 </div>
                 <div class="o-layout__cell o-layout__cell--triple">
-                  <svg class="a-svg-line a-svg-line--events" width="400" height="406" viewBox="0 0 400 406" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="a-svg-line a-svg-line--events" width="200" viewBox="0 0 400 406" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.99967 1C6.99967 1 -46.5007 315 244.954 220C337.19 189.936 276.453 159.5 251.953 199C227.453 238.5 237.453 309.5 373.453 358.5" stroke="#5F5420" stroke-width="6"/>
                     <path class="a-svg-line--events-vortex" d="M351.242 314.09C354.158 342.48 373.481 358.538 396.151 371.427" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
                     <path class="a-svg-line--events-vortex" d="M395.75 371.582C372.088 355.626 347.377 360.167 322.955 369.31" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
                   </svg>
-                    
                 </div>
               </div>
             </div>
@@ -206,12 +214,11 @@
         </div>
       </div>
 
-
       <!--RRPP BLOCK-->
       <div class="-bg -bg--cheddar">
-        <div class="m-marquee m-marquee--right">
+        <div class="m-marquee m-marquee--right m-marquee--space">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
 
@@ -234,7 +241,7 @@
                 <div class="o-layout__cell">
                 </div>
                 <div class="o-layout__cell o-layout__cell--triple">
-                  <svg class="a-svg-line a-svg-line--events" width="582" height="320" viewBox="0 0 582 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="a-svg-line a-svg-line--events" viewBox="0 0 582 320" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="a-svg-line--events-vortex" d="M535.831 232.851C508.792 241.982 497.412 264.381 489.864 289.342" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
                     <path class="a-svg-line--events-vortex" d="M489.625 288.985C499.944 262.377 490.043 239.285 475.719 217.495" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
                     <path d="M45.3124 11.724C72.5112 11.2456 145.515 12.5352 223.448 72.4909C301.381 132.447 325.093 221.264 290.984 211.422C256.876 201.58 361.697 123.362 434.5 143C510.5 163.5 504.5 230 496 266.5" stroke="#5F5420" stroke-width="6" stroke-linecap="round"/>
@@ -242,9 +249,12 @@
                 </div>
               </div>
             </div>
-            <div class="m-album m-album--press">
-              <img class="m-album__photo m-album__photo--v -rotate-right" src="images/img-dummy-press-1.png">
-              <img class="m-album__photo m-album__photo--p -rotate-left" src="images/img-dummy-press-2.png">
+            <div class="m-album m-album--press m-album--press-reset">
+              <img class="m-album__photo m-album__photo--p -rotate-left" src="images/Sesderma-307.png">
+              <img class="m-album__photo m-album__photo--v -rotate-right" src="images/Sesderma-213.png">
+
+              <!-- <img style="z-index: 3; height: 620px;" class="m-album__photo m-album__photo--p -rotate-left" src="images/Sesderma-213.png">
+              <img class="m-album__photo m-album__photo--v -rotate-right" src="images/Sesderma-307.png"> -->
             </div>
           </div> 
         </div>
@@ -252,9 +262,9 @@
 
       <!--RRPP BLOCK-->
       <div class="-bg -bg--watermelon">
-        <div class="m-marquee m-marquee--left">
+        <div class="m-marquee m-marquee--left m-marquee--space">
           <div class="m-marquee__track">
-            <div class="m-marquee--content">&nbsp;- Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - Relaciones públicas - </div>
+            <div class="m-marquee--content"></div>
           </div>
         </div>
 
@@ -277,7 +287,7 @@
                 <div class="o-layout__cell">
                 </div>
                 <div class="o-layout__cell o-layout__cell--triple">
-                    <svg class="a-svg-line a-svg-line--events width="172" height="325" viewBox="0 0 172 325" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="a-svg-line a-svg-line--events a-svg-line--vert" width="172" height="325" viewBox="0 0 172 325" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path class="a-svg-line--events-vortex" d="M1 6.09594C150.5 -23.9042 253 171.096 71 289.596" stroke="#8A2B40" stroke-width="6"/>
                       <path class="a-svg-line--events-vortex" d="M126.117 285.844C99.379 275.865 76.4161 286.061 54.8104 300.663" stroke="#8A2B40" stroke-width="6" stroke-linecap="round"/>
                       <path d="M54.8516 300.234C79.6473 286.104 86.537 261.942 89.1751 235.999" stroke="#8A2B40" stroke-width="6" stroke-linecap="round"/>
@@ -287,11 +297,10 @@
                 </div>
               </div>
             </div>
-            <img class="o-splash--image -rotate-left" src="images/img-dummy-1.png">
+            <img class="o-splash--image o-splash--fit -rotate-left" src="images/Sesderma-1036.png">
           </div> 
         </div>
       </div>
-
 
       <!--NUMBERS BLOCK-->
       <div class="-bg -bg--amber">        
@@ -299,19 +308,19 @@
           <div class="o-main__inner">
             <ol class="m-kpi-list">
               <li class="m-kpi-list__item -centered">
-                <img class="m-kpi-list__image m-kpi-list__image--right" src="images/img-dummy-1.png">
+                <img class="m-kpi-list__image m-kpi-list__image--right" src="images/Sesderma-car-0.png">
                 <p class="m-kpi-list--title">+10</p>
                 <p class="m-kpi-list--subtitle -bold">años</p>
                 <p>Thez CARTIER, on sait que notre seul moyen de connaître le succès</p>
               </li>
               <li class="m-kpi-list__item -centered">
-                <img class="m-kpi-list__image m-kpi-list__image--left" src="images/img-dummy-1.png">
+                <img class="m-kpi-list__image m-kpi-list__image--left" src="images/Sesderma-car-2.png">
                 <p class="m-kpi-list--title">230</p>
                 <p class="m-kpi-list--subtitle -bold">proyectos</p>
                 <p>Thez CARTIER, on sait que notre seul moyen de connaître le succès</p>
               </li>
               <li class="m-kpi-list__item -centered">
-                <img class="m-kpi-list__image m-kpi-list__image--right" src="images/img-dummy-1.png">
+                <img class="m-kpi-list__image m-kpi-list__image--right" src="images/Sesderma-car-1.png">
                 <p class="m-kpi-list--title">5</p>
                 <p class="m-kpi-list--subtitle -bold">premios</p>
                 <p>Thez CARTIER, on sait que notre seul moyen de connaître le succès</p>
@@ -324,8 +333,7 @@
       <!--CLOSE BLOCK-->
       <div class="o-main__wrapper">
         <div class="-bg-half">
-          <div class="o-main__inner o-main__inner--reset
-          ">
+          <div class="o-main__inner o-main__inner--reset">
             <div class="o-splash">
               <img class="o-splash--image" src="images/img-dummy-bar.png">
               <br>
@@ -343,7 +351,7 @@
       </div>
 
       <!--CLOSE BLOCK-->
-      <div class="o-main__wrapper">
+      <div id="contact" class="o-main__wrapper -js-contact">
         <div class="o-main__inner o-main__inner--form">
           <!--TEXT-->
           <div class="o-layout o-layout__row">
@@ -356,7 +364,7 @@
           <!--FORM-->
           <div class="o-layout o-layout__row">
             <div class="o-layout o-layout__cell  o-layout o-layout__cell -right">
-              <svg width="279" height="291" viewBox="0 0 279 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="a-svg-line--footer" width="279" height="291" viewBox="0 0 279 291" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.5">
                 <path d="M226.118 191.695C69.6256 232.721 13.2166 157.832 37.6074 74.0071" stroke="white" stroke-width="6"/>
                 <path d="M170.609 232.135C191.235 204.666 218.971 193.564 247.741 186.452" stroke="white" stroke-width="6" stroke-linecap="round"/>
@@ -387,10 +395,6 @@
         </div>
       </div>
 
-
-
-      
-      
       <!--END MAIN WRAPPER-->
     </main>
     <footer class="o-footer">
@@ -416,7 +420,7 @@
       </div>
       <p class="-centered">Kibo Media 2023© All rights reserved</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./js/scripts.js"></script>
   </body>
 </html>
-
-
