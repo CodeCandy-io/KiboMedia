@@ -11,7 +11,7 @@
 
 .o-main__inner--form {
   overflow: hidden;
-  margin: 120px 8px;
+  margin: 120px 16px;
   padding: 32px;
   border-radius: 15px;
   background-color: var(--c-text-color);
