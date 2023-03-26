@@ -59,6 +59,30 @@ const openMenu = () => {
   }
 }
 
+const animateImages = () => {
+  const images = document.querySelectorAll(".m-kpi-list__image")
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("m-kpi-list__image--right")) {
+          anime({
+            targets: entry.target,
+            translateX: 200
+          })
+        } else {
+          anime({
+            targets: entry.target,
+            translateX: -200
+          })
+        }
+      }
+    });
+  });
+
+  images.forEach(image => observer.observe(image))
+}
+
 const blogPost = (author, title, content, link) => {
   return `
   <div class="o-layout">
@@ -99,6 +123,7 @@ const fetchPosts = async () => {
 
 document.addEventListener('DOMContentLoaded',() => {
   fetchPosts()
+  animateImages()
   clickAnchor();
   openMenu();
   openMenuMobile();
