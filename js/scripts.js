@@ -67,7 +67,7 @@ const blogPost = (author, title, content, link) => {
         <p class="-small -pearl -uppercase">${author}</p>
         <p class="a-title a-title--m"><span class="-highlight-dark -bold">${title}</span></p>
         ${content}
-        <a class="a-link a-link--primary" href="${link}">Ver el post</a>
+        <a class="a-link a-link--primary" href="${link}" target="_blank">Ver el post</a>
       </div>
       <div class="o-layout__cell"></div>
     </div>
