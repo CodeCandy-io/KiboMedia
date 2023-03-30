@@ -59,7 +59,71 @@ const openMenu = () => {
   }
 }
 
+const animateImages = () => {
+  const images = document.querySelectorAll(".m-kpi-list__image")
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("m-kpi-list__image--right")) {
+          anime({
+            targets: entry.target,
+            translateX: 200
+          })
+        } else {
+          anime({
+            targets: entry.target,
+            translateX: -200
+          })
+        }
+      }
+    });
+  });
+
+  images.forEach(image => observer.observe(image))
+}
+
+const blogPost = (author, title, content, link) => {
+  return `
+  <div class="o-layout">
+    <div class="o-layout__row">
+      <div class="o-layout__cell">
+        <p class="-small -pearl -uppercase">${author}</p>
+        <p class="a-title a-title--m"><span class="-highlight-dark -bold">${title}</span></p>
+        ${content}
+        <a class="a-link a-link--primary" href="${link}" target="_blank">Ver el post</a>
+      </div>
+      <div class="o-layout__cell"></div>
+    </div>
+  </div>
+  `
+}
+
+const fetchPosts = async () => {
+  const myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  const requestOptions = {
+    method: "get",
+    headers: myHeaders,
+    redirect: "follow",
+  };
+
+  const postSection = document.getElementById("mediumBlog")
+
+  await fetch("https://v1.nocodeapi.com/codecandy/medium/ToEBpQrucCyOBdGm", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        result.forEach(post => {
+          postSection.insertAdjacentHTML('beforeend', blogPost(post.author, post.title, post.content, post.link))
+        })
+      })
+      .catch(error => console.log('error', error));
+}
+
 document.addEventListener('DOMContentLoaded',() => {
+  fetchPosts()
+  animateImages()
   clickAnchor();
   openMenu();
   openMenuMobile();
