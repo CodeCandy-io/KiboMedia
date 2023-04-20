@@ -35,6 +35,10 @@
     background: linear-gradient(var(--c-watermelon-color), var(--c-amber-color));
 }
 
+.-bg--publi {
+    background: linear-gradient(var(--c-watermelon-color), var(--c-amber-color));
+}
+
 .-bg--watermelon .m-marquee__track {
     color: var(--c-watermelon-color);
 }
