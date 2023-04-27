@@ -138,7 +138,7 @@ document.addEventListener('DOMContentLoaded',() => {
   const movingText = new Typed("#roulette", options)
 })
 
-function sendForm() {
+const sendForm = () => {
   const name = document.getElementById('nombre').value;
   const email = document.getElementById('email').value;
   const message = document.getElementById('detalle').value;
