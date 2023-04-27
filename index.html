@@ -356,21 +356,21 @@
               </svg>
             </div>
             <div class="o-layout o-layout__cell">
-              <form class="m-form">
+              <form class="m-form" id="ifttt-form">
                 <div class="m-form__input-wrapper">
                   <label class="m-form--label">Tu nombre</label>
-                  <input class="m-form--input" type="text">
+                  <input class="m-form--input" type="text" id="nombre">
                 </div>
                 <div class="m-form__input-wrapper">
                   <label class="m-form--label">Tu email</label>
-                  <input class="m-form--input" type="asas">
+                  <input class="m-form--input" type="email" id="email">
                 </div>
                 <div class="m-form__input-wrapper">
                   <label class="m-form--label">Un breve detalle de lo que necesitas</label>
-                  <input class="m-form--input" type="tefdfxt">
+                  <input class="m-form--input" type="text" id="detalle">
                 </div>
                 <div class="m-form__actions-wrapper">
-                  <a href="#contact" class="a-btn a-btn--contact -js-contact-trigger">Enviar</a>
+                  <button type="button" class="a-btn a-btn--contact -js-contact-trigger" onclick="sendForm()">Enviar</button>
                 </div>
               </form>
             </div>
