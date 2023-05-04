@@ -16,7 +16,7 @@
 }
 
 .-bg--banana {
-    background: linear-gradient(var(--c-banana-color), var(--c-cheddar-color));
+    
 }
 
 .-bg--banana .m-marquee__track {
@@ -54,7 +54,7 @@
 /* /BACKGROUND IMAGES */
 
 .-bg-image {
-    width: 80%;
+    width: 70%;
     position: absolute;
 }
 

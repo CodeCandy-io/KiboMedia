@@ -121,6 +121,37 @@ const fetchPosts = async () => {
       .catch(error => console.log('error', error));
 }
 
+
+const sections = document.querySelectorAll('section')
+    
+window.addEventListener('scroll', function() {
+    sections.forEach(section => {
+        const distFromTop = document.body.scrollTop + section.getBoundingClientRect().top
+        if (distFromTop < 150) {
+            document.body.style.background = section.dataset.color
+        }
+    })
+})
+
+const header = document.querySelector('header');
+
+function addClassOnTop() {
+  const headerOffsetTop = header.offsetTop;
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const position = headerOffsetTop - scrollTop;
+
+  if (window.scrollY > 1900) {
+    header.classList.add('o-header--sticky');
+  } else {
+    header.classList.remove('o-header--sticky');
+  }
+}
+
+// escuchamos el evento "scroll" y llamamos a la función addClassOnTop
+window.addEventListener('scroll', addClassOnTop);
+
+
+
 document.addEventListener('DOMContentLoaded',() => {
   fetchPosts()
   animateImages()

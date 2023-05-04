@@ -9,6 +9,7 @@ html {
 }
 
 body {
+  transition: background-color .2s ease;
   overflow-x: hidden;
   color: var(--c-text-color);
   font-family: var(--f-text-regular);
@@ -25,5 +26,4 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
 }

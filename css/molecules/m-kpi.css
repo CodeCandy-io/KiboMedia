@@ -19,6 +19,13 @@
     margin: 0 auto 48px;
 }
 
+.m-kpi-list__item p {
+    position: relative;
+    max-width: 620px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
 .m-kpi-list--title {
     font-size: 30vw;
     margin-bottom: 8px;
@@ -47,6 +54,7 @@
         top: -120px;
         max-width: 320px;
         margin: 0 auto;
+        z-index: 1;
     }
 
     .m-kpi-list__image--right {
