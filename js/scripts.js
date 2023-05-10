@@ -168,3 +168,32 @@ document.addEventListener('DOMContentLoaded',() => {
 
   const movingText = new Typed("#roulette", options)
 })
+
+const sendForm = () => {
+  const name = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('detalle').value;
+
+  const webhookUrl = 'https://maker.ifttt.com/trigger/LqVu5vgM/with/key/dehkO08GqtQISyogG5gQll';
+  const payload = {
+    value1: name,
+    value2: email,
+    value3: message,
+  };
+
+  fetch(webhookUrl, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: { 'Content-Type': 'application/json' },
+  })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Notificación enviada con éxito.');
+        } else {
+          console.log('Error al enviar la notificación:', response.statusText);
+        }
+      })
+      .catch((error) => {
+        console.error('Error al enviar la notificación:', error);
+      });
+}
