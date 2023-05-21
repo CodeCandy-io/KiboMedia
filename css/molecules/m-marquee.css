@@ -55,7 +55,7 @@
 
 .-bg--publi .m-marquee__track {
     background-image: url("../../images/img-marq-publi.svg");
-
+}
 
 @media (min-width: 1020px) {
     .m-marquee {
