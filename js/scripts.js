@@ -139,6 +139,34 @@ const formSubmit = () => {
   })
 }
 
+const sections = document.querySelectorAll('section')
+    
+window.addEventListener('scroll', function() {
+    sections.forEach(section => {
+        const distFromTop = document.body.scrollTop + section.getBoundingClientRect().top
+        if (distFromTop < 150) {
+            document.body.style.background = section.dataset.color
+        }
+    })
+})
+
+const header = document.querySelector('header');
+
+function addClassOnTop() {
+  const headerOffsetTop = header.offsetTop;
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  const position = headerOffsetTop - scrollTop;
+
+  if (window.scrollY > 1900) {
+    header.classList.add('o-header--sticky');
+  } else {
+    header.classList.remove('o-header--sticky');
+  }
+}
+
+// escuchamos el evento "scroll" y llamamos a la función addClassOnTop
+window.addEventListener('scroll', addClassOnTop);
+
 document.addEventListener('DOMContentLoaded',() => {
   fetchPosts()
   animateImages()
@@ -156,3 +184,32 @@ document.addEventListener('DOMContentLoaded',() => {
 
   const movingText = new Typed("#roulette", options)
 })
+
+const sendForm = () => {
+  const name = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('detalle').value;
+
+  const webhookUrl = 'https://maker.ifttt.com/trigger/LqVu5vgM/with/key/dehkO08GqtQISyogG5gQll';
+  const payload = {
+    value1: name,
+    value2: email,
+    value3: message,
+  };
+
+  fetch(webhookUrl, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: { 'Content-Type': 'application/json' },
+  })
+      .then((response) => {
+        if (response.ok) {
+          console.log('Notificación enviada con éxito.');
+        } else {
+          console.log('Error al enviar la notificación:', response.statusText);
+        }
+      })
+      .catch((error) => {
+        console.error('Error al enviar la notificación:', error);
+      });
+}

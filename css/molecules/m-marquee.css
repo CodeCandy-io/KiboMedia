@@ -53,6 +53,9 @@
     background-image: url("../../images/img-marq-relaciones.svg");
 }
 
+.-bg--publi .m-marquee__track {
+    background-image: url("../../images/img-marq-publi.svg");
+}
 
 @media (min-width: 1020px) {
     .m-marquee {
@@ -60,14 +63,11 @@
     }
 }
 
-
 @media (min-width: 1500px) {
     .m-marquee__track {
         height: 100px;
     }
 }
-
-
 
 @keyframes marquee {
     from { transform: translateX(0); }
