@@ -354,21 +354,21 @@
               </svg>
             </div>
             <div class="o-layout o-layout__cell">
-              <form class="m-form">
+              <form id="contact-form" class="m-form">
                 <div class="m-form__input-wrapper">
                   <label class="m-form--label">Tu nombre</label>
-                  <input class="m-form--input" type="text">
+                  <input class="m-form--input" type="text" name="contact_name">
                 </div>
                 <div class="m-form__input-wrapper">
                   <label class="m-form--label">Tu email</label>
-                  <input class="m-form--input" type="asas">
+                  <input class="m-form--input" type="email" name="contact_email">
                 </div>
                 <div class="m-form__input-wrapper">
                   <label class="m-form--label">Un breve detalle de lo que necesitas</label>
-                  <input class="m-form--input" type="tefdfxt">
+                  <input class="m-form--input" type="text" name="contact_message">
                 </div>
                 <div class="m-form__actions-wrapper">
-                  <a href="#contact" class="a-btn a-btn--contact -js-contact-trigger">Enviar</a>
+                  <input class="a-btn a-btn--contact -js-contact-trigger" type="submit" value="Enviar">
                 </div>
               </form>
             </div>
@@ -404,5 +404,13 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./js/anime.min.js"></script>
     <script src="./js/scripts.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("DMgJa7G81cZBLAWHA");
+      })();
+    </script>
   </body>
 </html>
