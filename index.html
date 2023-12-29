@@ -340,40 +340,39 @@
               </div>
               <div class="o-layout o-layout__cell"></div>
             </div>
-            <!--FORM-->
-            <div class="o-layout o-layout__row">
-              <div class="o-layout o-layout__cell  o-layout o-layout__cell -right">
-                <svg class="a-svg-line--footer" width="279" height="291" viewBox="0 0 279 291" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.5">
-                  <path d="M226.118 191.695C69.6256 232.721 13.2166 157.832 37.6074 74.0071" stroke="white" stroke-width="6"/>
-                  <path d="M170.609 232.135C191.235 204.666 218.971 193.564 247.741 186.452" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                  <path d="M247.476 186.197C215.86 196.108 196.268 185.395 179.851 170.184" stroke="white" stroke-width="6" stroke-linecap="round"/>
-                  </g>
-                </svg>
-              </div>
-              <div class="o-layout o-layout__cell">
-                <form class="m-form">
-                  <div class="m-form__input-wrapper">
-                    <label class="m-form--label">Tu nombre</label>
-                    <input class="m-form--input" type="text">
-                  </div>
-                  <div class="m-form__input-wrapper">
-                    <label class="m-form--label">Tu email</label>
-                    <input class="m-form--input" type="asas">
-                  </div>
-                  <div class="m-form__input-wrapper">
-                    <label class="m-form--label">Un breve detalle de lo que necesitas</label>
-                    <input class="m-form--input" type="tefdfxt">
-                  </div>
-                  <div class="m-form__actions-wrapper">
-                    <a href="#contact" class="a-btn a-btn--contact -js-contact-trigger">Enviar</a>
-                  </div>
-                </form>
-              </div>
+ <!--FORM-->
+          <div class="o-layout o-layout__row">
+            <div class="o-layout o-layout__cell  o-layout o-layout__cell -right">
+              <svg class="a-svg-line--footer" width="279" height="291" viewBox="0 0 279 291" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                <path d="M226.118 191.695C69.6256 232.721 13.2166 157.832 37.6074 74.0071" stroke="white" stroke-width="6"/>
+                <path d="M170.609 232.135C191.235 204.666 218.971 193.564 247.741 186.452" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                <path d="M247.476 186.197C215.86 196.108 196.268 185.395 179.851 170.184" stroke="white" stroke-width="6" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </div>
+            <div class="o-layout o-layout__cell">
+              <form id="contact-form" class="m-form">
+                <div class="m-form__input-wrapper">
+                  <label class="m-form--label">Tu nombre</label>
+                  <input class="m-form--input" type="text" name="contact_name">
+                </div>
+                <div class="m-form__input-wrapper">
+                  <label class="m-form--label">Tu email</label>
+                  <input class="m-form--input" type="email" name="contact_email">
+                </div>
+                <div class="m-form__input-wrapper">
+                  <label class="m-form--label">Un breve detalle de lo que necesitas</label>
+                  <input class="m-form--input" type="text" name="contact_message">
+                </div>
+                <div class="m-form__actions-wrapper">
+                  <input class="a-btn a-btn--contact -js-contact-trigger" type="submit" value="Enviar">
+                </div>
+              </form>
+             </div>
             </div>
           </div>
         </div>
-      </section>
       <!--END MAIN WRAPPER-->
     </main>
     <footer style="background-color: #fff;" class="o-footer">
@@ -400,5 +399,13 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="./js/anime.min.js"></script>
     <script src="./js/scripts.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("DMgJa7G81cZBLAWHA");
+      })();
+    </script>
   </body>
 </html>

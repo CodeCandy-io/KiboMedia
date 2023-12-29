@@ -121,6 +121,23 @@ const fetchPosts = async () => {
       .catch(error => console.log('error', error));
 }
 
+const sendForm = (form) => {
+  emailjs.sendForm('service_xfse8vg', 'template_d1m8byo', '#contact-form')
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        form.innerHTML = "<p>Mensaje recibido, nos pondremos en contact</p>"
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
+}
+
+const formSubmit = () => {
+  const form = document.getElementById("contact-form")
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    sendForm(form)
+  })
+}
 
 const sections = document.querySelectorAll('section')
     
@@ -150,14 +167,13 @@ function addClassOnTop() {
 // escuchamos el evento "scroll" y llamamos a la función addClassOnTop
 window.addEventListener('scroll', addClassOnTop);
 
-
-
 document.addEventListener('DOMContentLoaded',() => {
   fetchPosts()
   animateImages()
   clickAnchor();
   openMenu();
   openMenuMobile();
+  formSubmit();
 
   let options = {
     strings: ["marca", "producto", "evento"],
